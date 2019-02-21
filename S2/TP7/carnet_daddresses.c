@@ -23,12 +23,17 @@ void listrecord();
 void modifyrecord();
 void deleterecord();
 void searchrecord();
+
+
 int main()
 {
-    system("color 5f");
+    // system("color 5f");
     start();
     return 0;
 }
+
+
+
 void back()
 {
     start();
@@ -260,7 +265,7 @@ void modifyrecord()
                 got(s.mail);
                 printf("\nEnter citizen no\n");
                 got(s.citision_no);
-                fseek(f, -sizeof(p), SEEK_CUR);
+                fseek(f, sizeof(p), SEEK_CUR);
                 fwrite(&s, sizeof(p), 1, f);
                 flag = 1;
                 break;
