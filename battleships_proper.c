@@ -15,7 +15,7 @@ int board()
     return array[SIZE][SIZE];
 }
 
-void print_array(int **array)
+void print_array(int *array)
 {
     int i, j;
     for(i = 0; i < SIZE; i++)
@@ -39,10 +39,10 @@ void print_array(int **array)
 
 int main()
 {
-    int ** a;
+    int * a;
     a = board();
 
-    print_array(a);
+    print_array(&a);
 
     return 0;
 }

@@ -1,14 +1,39 @@
 #include <stdio.h>
-#include <limits.h>
-#include <float.h>
+#include <string.h>
+#include <stdlib.h>
+#define SIZE 30
 
-int main() {
-	printf("The size of an int is %d\n", sizeof(int));
-	printf("Minimum size of a float is %E\n", FLT_MIN);
-	printf("Maximum size of a float is %E\n", FLT_MAX);
-	printf("Precision value %d\n", FLT_DIG );
+int str_counter(const char *p)
+{
+	int c = 0;
+	while(*p)
+	{	
+		++p;
+		c++;
+	}
+	printf("%d characters", c);
 
-	printf("Press Any Key to Continue\n");  
-	getchar();  
+	return c;
+}
+
+int main(void)
+{
+	char *p = (char*) calloc(SIZE, sizeof(char));
+
+	if(!p)
+	{
+		exit(0);
+	}
+	else 
+	{
+		printf("Memory was allocated succesfully\n");
+	}
+
+	printf("Enter a string: \n");
+	gets(p);
+
+	str_counter(p);
+	free(p);
+	
 	return 0;
 }
