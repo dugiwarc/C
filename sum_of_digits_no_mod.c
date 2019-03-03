@@ -1,22 +1,27 @@
 #include <stdio.h>
 
+int digit_counter(int n)
+{
+    printf("%d\n", n);
+    if(n < 10)
+        return 1;
+    return 1 + digit_counter(n/10); 
+}
 int main()
 {
-    int c, sum, t;
-    char n[1000];
-
-    printf("Input an integer\n");
-    scanf("%s", n);
-
-    sum = c = 0;
-
-    while (n[c] != '\0') 
+    // int a[] = {11,12,13,14,15};
+    // int *p;
+    int number;
+    // p = a;
+    // b(p, 4);
+    char p = 'y';
+    while(p == 'y')
     {
-        t = n[c] - '0'; // converting character to integer
-        sum = sum + t;
-        c++;
+        scanf("%d", &number);
+        int a = digit_counter(number);
+        printf("%d", a);
+        printf("Another?\n");
+        scanf("%c", &p);
     }
-
-    printf("Sum of digits of %s = %d\n", n, sum);
     return 0;
 }

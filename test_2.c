@@ -11,7 +11,7 @@ struct item
     float price, amount;
 };
 
-void readItem(struct item * i);
+void readItem(struct item *i);
 void printItem(struct item *i);
 
 int main(void)
