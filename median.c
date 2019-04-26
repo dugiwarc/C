@@ -16,13 +16,13 @@ int main()
         scanf("%d", &input);
         sum+= coeffs[i] * input;
     }
-    result = ((sum / 3) + 12.5)/2;
-    printf("Result: %.2f\n", result);
+    result = ((sum / 3) + 12.6)/2;
+    printf("\t\t\t\t\tEstimate: %.2f\n", result);
 
     printf("\t\t\t\t==========================\n");
     
     if(result > 10)
-        printf("Congrats, nothing to worry about\n");
+        printf("\n\t\t\t\tCongrats, nothing to worry about\n");
 
     return 0;
 }

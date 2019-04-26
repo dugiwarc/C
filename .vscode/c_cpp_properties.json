@@ -3,7 +3,9 @@
         {
             "name": "Win32",
             "includePath": [
-                "${workspaceFolder}/**"
+                "${workspaceFolder}/**",
+                "/usr/include/linux",
+                "/usr/include/c++/7/tr1"
             ],
             "defines": [
                 "_DEBUG",

@@ -24,15 +24,12 @@ void modifyrecord();
 void deleterecord();
 void searchrecord();
 
-
 int main()
 {
     // system("color 5f");
     start();
     return 0;
 }
-
-
 
 void back()
 {
