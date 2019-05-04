@@ -1,16 +1,33 @@
 #include <stdbool.h>
 #include <stdlib.h>
 
-bool comp(const int *a, const int *b, size_t n)
+bool comp(int *a, int *b, size_t sizeArray)
 {
-    for (int i = 0; i < n; i++)
+
+    int total = 0;
+
+    for (int i = 0; i < sizeArray; i++)
     {
-        for (int j = 0; j < n; j++)
+
+        int squared = a[i] * a[i];
+        int sameArray = 0;
+        int squaredMatch = 0;
+
+        for (int j = 0; j < sizeArray; j++)
         {
-            if (a[i] * a[i] == b[j])
-                return true;
+            if (a[i] == a[j])
+            {
+                sameArray++;
+            }
+            if (squared == b[j])
+            {
+                squaredMatch++;
+            }
+        }
+        if (sameArray == squaredMatch)
+        {
+            total++;
         }
     }
-
-    return false;
+    return (total == sizeArray) ? true : false;
 }
