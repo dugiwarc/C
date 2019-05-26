@@ -1,0 +1,4 @@
+GestionCarnet.c: In function ‘main’:
+GestionCarnet.c:19:38: error: dereferencing pointer to incomplete type ‘struct Contact’
+     scanf("%s", *(contact_00->Spouse)->Name);
+                                      ^~
