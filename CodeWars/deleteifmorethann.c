@@ -65,5 +65,8 @@ int main()
         printf("%ld\n", *p);
         for (int i = 0; i < *p; i++)
                 printf("%d\n", ret_arr[i]);
+
+        free(p);
+        free(ret_arr);
         return 0;
 }
